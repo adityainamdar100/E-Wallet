@@ -1,4 +1,4 @@
-package com.project.EWallet.user;
+package com.project.EWallet.wallet;
 import lombok.*;
 
 import javax.persistence.*;
@@ -9,12 +9,11 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Builder
-public class User {
+public class Wallet {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "internalId")
-    private Long id;
-    private String userId;
-    private String email;
-
+    Long id;
+    String userId;
+    Double balance;
 }
